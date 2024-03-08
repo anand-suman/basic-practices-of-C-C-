@@ -31,15 +31,15 @@ int main()
 4.=> storage Area:- where a variable is stored
 
 
-
+ 
 +++++++++++++++++++++++++++ AUTO +++++++++++++++++++++++++++++++++++++++++++++++++++
        1.=> SCOPE :- "block in which they are declared".
        2.=> LIGETIME:- "block in which they are declared"
        3.=> DEGAULT VALUE:- "garbage"
        4.=> STPRAGE AREA:- "stack" 
-=> main scope variables are accessible to sub-scope variables.
-=> sub-scope variables are not accessible to main scope variavbles.
-=> local/auto variables are created automatically wheb we eter the block in whivh they are declared and destructed automatrically when we exit the block.
+    => main scope variables are accessible to sub-scope variables.
+    => sub-scope variables are not accessible to main scope variavbles.
+    => local/auto variables are created automatically wheb we eter the block in whivh they are declared and destructed automatrically when we exit the block.
 
 
 ++++++++++++++++++++++++ REGISTER +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -58,9 +58,9 @@ int main()
        2.=> LIGETIME:- "Program"
        3.=> DEGAULT VALUE:- "0"
        4.=> STPRAGE AREA:- "static area (date segnemet)" 
-=> The value persist between diggent funtion call.
-=> No redeclarations.
-=> They are created only once in the program.
+    => The value persist between diggent funtion call.
+    => No redeclarations.
+    => They are created only once in the program.
    
 +++++++++++++++++++++++++++ GLOBAL(EXTERN) +++++++++++++++++++++++++++++++++++++++++++++++++++
        1.=> SCOPE :- "though out the program".
@@ -68,7 +68,19 @@ int main()
        3.=> DEGAULT VALUE:- "0"
        4.=> STPRAGE AREA:- "stack area" 
    
-   
+=> static variable must be initialized bt literals.
+=> extern is etarnal file scop hota hai (Extrnal likege)
+
+=> goble veriable tha assigrment valide nhi hai
+
+=> goble or static same nhi hai yadd rakhna
+
+
+
+
+
+
+
    
    
    

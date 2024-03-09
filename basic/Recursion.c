@@ -100,6 +100,22 @@ void fun(int n)
 // }
 
 
+int f2(int n)
+{
+    int x=1,k;
+    if(n==1)
+    {
+        return x;
+    }
+    for ( k = 1; k < n; ++k)
+    {
+        /* code */
+        x=x+f2(k)*f2(n-k);
+    }
+    
+    return x;
+}
+
 // int f2(int n)
 // {
 //     if(n<=1)
@@ -118,18 +134,32 @@ void fun(int n)
 //     ;
 // }
 
-int f2(unsigned int n)
-{
-    if(n==0 || n==1)
-    {
-        return n;
-    }
-    if(n%3!=0)
-    {
-        return 0;
-    }
-    return f2(n/3);
-}
+// void f2(int n)
+// {
+//    static int d =1;
+//    printf("%d",n);
+//    printf("%d",d);
+//    d++;
+//     if(n>1)
+//     {
+//         f2(n-1);
+//     }
+//     printf("%d",d);
+// }
+
+
+// int f2(unsigned int n)
+// {
+//     if(n==0 || n==1)
+//     {
+//         return n;
+//     }
+//     if(n%3!=0)
+//     {
+//         return 0;
+//     }
+//     return f2(n/3);
+// }
 
 
 //  int power(int a,int b)
@@ -174,9 +204,11 @@ int main()
     // printf("%d", n);
     // fun(3);
     // printf("\n %d \n", f2(12)); 
-    printf("\n %d \n", f2(3));  
+    // printf("\n %d \n", f2(3));  
     // printf("\n %d \n", f2(12));  
-    // printf("\n %d \n", f2(513,2)); 
+    // printf("\n %d \n", f2(513,2));
+    printf("\n %d \n", f2(5));
+    //f2(3); 
 
     return 0;
 }
@@ -192,6 +224,15 @@ int main()
 //         printf("%d",var);
     
 //     }    
+// }
+
+// void main()
+// {
+//     //static int var =5;
+//     // printf("%d",var--);
+//     // if(var)
+//     main();
+//     return ;
 // }
 
 // void main()

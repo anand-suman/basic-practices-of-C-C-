@@ -110,21 +110,121 @@ a[i]<=> i[a]
 
 
 
+// int main()
+// {
+//  int a[2][3]={1,2,3,4,5,6,};
+
+// //  printf("%u\n",a);
+// //  printf("%u\n",a[0]);  //sab same hai
+// //  printf("%u\n",&a);
+
+
+// //  printf("%u\n",a+1);
+// //  printf("%u\n",a[0]+1);
+// //  printf("%u\n",&a+1);
+
+
+
+
+//     return 0;
+// }
+
+
+//=============================================================== POINTERS =============================================================================
+
+/*
+ Pointer is a special variable which is used to hold address of other variable
+
+ int *p  => pointer veriable  p can hold the address of integer variable
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMPLEX DECLARATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    () => funtion (1, L to R)
+    [] => Array   (1, L to R) 
+    identifier      (2, R to L)
+    *               (2, R to L)
+    data  type      (3)
+
+Function Ponter
+
+int (*p)(int , int)
+p is a pointe to function that takes two integer arguments and return an integer
+
+we can store the addres of function 
+
+int* (*p)[4]; p is a pointer to an array of 4 int *a[4]; pointer to integer 
+
+*/
+
+int add(int, int);
+int sub(int, int);
+int mul(int, int);
+void f(int (*)(int,int ),int, int);//what is this
+// int main()
+// {
+//     // int x=10;
+//     // int *p;
+//     // p=&x;
+//     // int x=100;
+//     // int x=165;
+
+//     // char *p=&x;
+
+//     // printf("%u",p);
+//     // // printf("\n%u",&p);
+//     // printf("\n%d",*p);
+//     // int a[4]={10,20,30,40};
+//     // int *p;
+//     // p=&a[0];
+//     // printf("%d\n",*++p);
+//     // // ++*p;
+//     // printf("%d\n",++*p);
+//     // ++p;
+//     // printf("%d",*++p);
+
+// int(*p)(int,int);
+// int a=10,b=30,sum;
+// p = &add;
+// sum = (*p)(a,b);
+// printf("%d",sum);
+
+
+//     return 0;
+// }
 int main()
 {
- int a[2][3]={1,2,3,4,5,6,};
+    int (*p)(int , int);
+    int a=10,b=20;
 
-//  printf("%u\n",a);
-//  printf("%u\n",a[0]);  //sab same hai
-//  printf("%u\n",&a);
-
-
-//  printf("%u\n",a+1);
-//  printf("%u\n",a[0]+1);
-//  printf("%u\n",&a+1);
-
-
-
+p=add;
+f(p,a,b);
+p=sub;
+f(p,a,b);
+p=mul;
+f(p,a,b);
 
     return 0;
 }
+int add(int x, int y)
+{
+    return x+y;
+}
+
+
+int sub(int x, int y)
+{
+    return x-y;
+}
+
+
+int mul(int x, int y)
+{
+    return x*y;
+}
+
+
+void f(int (*p)(int x, int y), int a, int b)
+{
+    printf("%d",(*p)(a,b));
+}
+

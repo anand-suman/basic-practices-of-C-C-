@@ -154,6 +154,105 @@ we can store the addres of function
 
 int* (*p)[4]; p is a pointer to an array of 4 int *a[4]; pointer to integer 
 
+Arrays  
+   int a[2][3][2]                                             
+                                                pointer
+a -> &a[0]; addres of a 2-D array               int (*p)[3][2]
+
+a[0] -> &a[0][0]; addres of 1-D array[2]        int (*p)[2]
+
+a[0][0] -> &a[0][0][0] addres of integer         int *p
+
+&a -> addres of 3-D array                         int (*p)[2][3][2]
+
+
+=========================================== void pointer =============================================================
+
+void *p;
+int i = 10;
+char ch = "A";
+
+p= &i;
+
+printf("%d", *p);// error show kare ga qki pointer ko patanhi kitna byte lena lena hai 
+
+printf("%d", *(int*)p); idhar typecasting kiya gya hai toh aab ye kam kare ga
+
+Importent pointes
+-> Don't derefrence a void pointer without typecasting
+-> 
+
+
+=========================================== Null pointer =============================================================
+
+-> apecially designed pointer .
+                            => valid pointer => that points to some valid address
+                            
+=========================================== Wild pointer =============================================================
+
+-> Any uninitilized pointer .
+
+
+
+==========================================Dangling pointer  pointer =============================================================
+
+-> jo pointer aab memory me nhi hai
+-> local variable ka addres returen nhi karna chaiye
+-> negateive aspect for progmaram
+                          
+                            
+
+
+============================================ Dynamic Memory Alloction ==================================================================
+
+(1) malloc
+(2) calloc
+(3) realloc()
+(4) free()
+
+ye Heap me banta hai
+
+############ malloc
+
+malloc ( size in bytes )
+
+malloc ka return type void hotah hai
+
+        (void*) malloc (unsigned int);
+
+        p= malloc(5 * sizeof(int));
+
+        ye garbeg value deta hai
+
+        not relable
+
+############## calloc
+
+
+work same as malloc 
+        calloc(No. of bloks , size of each block)
+
+        calloc(5,sizeof(int));
+
+        -> search
+        -> sare bits 0 hote hai
+        starting address return 
+
+        Relable
+
+############### Realloc
+
+previous memory is allocated either by using malloc or calloc
+
+        p= realloc(p, new_size);
+
+
+
+############### Free
+
+ ye bs memory ko free karta hai jo malloc or calloc allocation hua hai use free karan ho toh hum hum free ko call karte hai
+
+ memoru leakage problem
 */
 
 int add(int, int);
